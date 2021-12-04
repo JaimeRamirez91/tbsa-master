@@ -1,0 +1,1409 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body {
+    padding-top: 50px;
+    background: #e2e2e2;
+}
+
+#content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#PadreContenido {
+    padding-left: var( bs gutter x,.75rem);
+    padding-right: var( bs gutter x,.75rem);
+}
+
+#nomHome:hover{
+    color:rgb(255, 255, 255) !important;
+}
+
+#btn {    
+    margin-left: 8px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #63707E;
+}
+
+.ir-arriba {
+    display: none;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+    font-size: 20px;
+    color: #707780;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+header {
+    background: #11101D;
+}
+
+footer {
+    min-height: 15vh;
+    background: #11101D;
+}
+
+/* Inicio Header*/
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+  
+.form-control-dark {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+  
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+  
+.text-small {
+    font-size: 85%;
+}
+  
+.dropdown-toggle {
+    outline: 0;
+}
+/* Fin Header */
+
+
+
+/*
+    DEMO STYLE
+*/
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i,
+span {
+    display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+ol, ul {
+    padding-left: 0 !important;
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 86px;
+    background: #11101D;
+    padding: 6px 14px;
+    z-index: 100;
+    transition: all 0.5s ease;
+    overflow: scroll;
+}
+
+.sidebar.open{
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #272542;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:active {
+    background-color: #131220;
+}
+  
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #1b1a2e;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+  
+/* Estilos track de scroll */
+.sidebar::-webkit-scrollbar-track {
+    background: #555091;
+    border-radius: 4px;
+}
+  
+.sidebar::-webkit-scrollbar-track:hover, 
+.sidebar::-webkit-scrollbar-track:active {
+    background: #423e70;
+}  
+
+.sidebar.open{
+    width: 250px;
+}
+
+.sidebar .logo-details{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar .logo-details .icon{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar .logo-details .logo_name{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+    opacity: 1;
+}
+
+.sidebar .logo-details #btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details #btn{
+    text-align: right;
+}
+
+.sidebar i{
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sidebar .nav-list{
+    height: 100%;
+}
+
+.sidebar li{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.sidebar li .tooltip{
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: rgb(41, 41, 53);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar li:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar.open li .tooltip{
+    display: none;
+}
+
+.sidebar input{
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #1d1b31;
+}
+
+.sidebar.open input{
+    padding: 0 20px 0 50px;
+    width: 100%;
+}
+
+.sidebar .bx-search{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #1d1b31;
+    color: #FFF;
+}
+
+.sidebar.open .bx-search:hover{
+    background: #1d1b31;
+    color: #FFF;
+}
+
+.sidebar .bx-search:hover{
+    background: #FFF;
+    color: #11101d;
+}
+
+.sidebar li a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #11101D;
+}
+
+.sidebar li a:hover{
+    background: #FFF;
+}
+
+.sidebar li a .links_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar.open li a .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+    transition: all 0.5s ease;
+    color: #11101D;
+}
+
+.sidebar li i{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.sidebar li.profile{
+    position: fixed;
+    height: 60px;
+    width: 86px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    background: #1d1b31;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.sidebar.open li.profile{
+    width: 250px;
+}
+
+.sidebar li .profile-details{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.sidebar li img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.sidebar li.profile .job{
+    font-size: 12px;
+}
+
+.sidebar .profile #log_out{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #1d1b31;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .profile #log_out{
+    width: 50px;
+    background: none;
+}
+
+.home-section{
+    position: relative;
+    background: #e2e2e2;
+    min-height: 100vh;
+    height: 100%;
+    left: 86px;
+    width: calc(100% - 86px);
+    transition: all 0.5s ease;
+}
+
+.sidebar.open ~ .home-section{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+/* CSS de Sidebar */
+
+button {
+    transition: all 1s ease;
+}
+
+.btnPerfil{
+    border: 0;
+}
+
+.btnPerfil:hover{
+    background: #525252;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 420px) {
+    .sidebar li .tooltip{
+        display: none;
+    }
+}
+
+/* ---------------------------------------------------
+    Pantallas < 768px 
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+    }
+
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+    }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+
+    #sidebar {
+        margin-left: 0;
+    }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* ---------------------------------------------------
+    Pantallas < 576px Extra small (xs)
+----------------------------------------------------- */
+@media (max-width: 576px) {
+    .divbtnLeft {
+        margin-left: 0% !important;
+    }
+
+    .heigthImg{
+        height: 225px !important;
+    }
+    
+    .heigthGalery{
+        height: 300px !important;
+    }
+    
+    #btnActualizarPrecios{
+        width: 100%;
+        margin-top: 2vh;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    #imgUpPrecios{
+        width: 50%;
+        height: 50%;
+    }
+    .imgPLA{
+        min-width: 100% !important;
+        min-height:100%  !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+    }
+    .imgPLAR{
+        min-width: 100% !important;
+        min-height:100%  !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+    }
+    .parrafoPLA{
+        font-size: 1.2em !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .temaPLA{
+        font-size: 2.4em !important;
+    }
+
+    #rowHome {
+        margin-left: 2%;
+        margin-right: 2%;
+        text-align: center;
+    }
+    .borderimgL{
+        border-radius: 50%;
+        display: inline;
+        float: center;
+    }
+    .parrafoInst{
+        
+        font-size: 1.1em !important;
+
+        
+    }
+    .tituloInst{
+        font-size: 2em !important;
+    
+    }
+    .TemaLA{
+        text-align: center;
+        font-weight: bold;
+        color:#11101D;
+        font-size: 2.1em;
+    }
+    .LineCapacitaciones{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 11%;
+        margin-right: 11%;
+        opacity: .99;
+    }
+    
+    .LineGE{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 9%;
+        margin-right: 9%;
+        opacity: .99;
+    }
+    
+    .LineAT{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 9%;
+        margin-right: 9%;
+        opacity: .99;
+    }
+    
+    .LinePN{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 13%;
+        margin-right: 13%;
+        opacity: .99;
+    }
+    
+    .LineGA{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 14%;
+        margin-right:14%;
+        opacity: .99;
+    }
+}
+
+/* ---------------------------------------------------
+    Pantallas ≥ 576px Small (sm)
+----------------------------------------------------- */
+@media (min-width: 576px) {
+    .heigthImg{
+        height: 300px !important;
+    }
+    
+    .heigthGalery{
+        height: 225px !important;
+    }
+
+    #btnActualizarPrecios{
+        width: 100%;
+        margin-top: 2vh;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    #imgUpPrecios{
+        align-items: center;
+        width: 50%;
+        height: 50%;
+    }
+    .imgPLA{
+        min-width: 100% !important;
+        min-height:100%  !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+    }
+    .imgPLAR{
+        min-width: 100% !important;
+        min-height:100%  !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+    }
+    .parrafoPLA{
+        font-size: 1.3em !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .temaPLA{
+        font-size: 2.5em !important;
+    }
+    #rowHome {
+        margin-left: 3%;
+        margin-right: 3%;
+        text-align: center;
+    }
+    .borderimgL{
+        border-radius: 50%;
+        display: inline;
+        float: center;
+    }
+    .TemaLA{
+        text-align: center;
+        font-weight: bold;
+        color:#11101D;
+        font-size: 2.2em;
+    }
+    .parrafoInst{
+        font-size: 1.2em !important;
+       
+
+    }
+    .tituloInst{
+        font-size: 2.1em !important;
+        
+    }
+    .LineCapacitaciones{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 9%;
+        margin-right: 9%;
+        opacity: .99;
+    }
+    
+    .LineGE{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 15%;
+        margin-right: 15%;
+        opacity: .99;
+    }
+    
+    .LineAT{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 15%;
+        margin-right: 15%;
+        opacity: .99;
+    }
+    
+    .LinePN{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 9%;
+        margin-right: 9%;
+        opacity: .99;
+    }
+    
+    .LineGA{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 18%;
+        margin-right: 18%;
+        opacity: .99;
+    }
+}
+
+/* ---------------------------------------------------
+    Pantallas ≥ 768px Medium (md)
+----------------------------------------------------- */
+@media (min-width: 768px) {
+    .heigthImg{
+        height: 225px !important;
+    }
+    
+    .heigthGalery{
+        height: 275px !important;
+    }
+
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+    
+    #btnActualizarPrecios{
+        margin-top: 0;
+    }
+
+    .parrafoPLA{
+        font-size: 1.1em !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+    }
+
+    .temaPLA{
+        font-size: 2.3em !important;
+    }
+    .imgPLA{
+        min-width: 100% !important;
+        min-height:100%  !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+    }
+    .divText{
+        min-width: 275px !important;
+        min-height:210px  !important;
+    }
+
+    #rowHome {
+        margin-left: 3%;
+        margin-right: 3%;
+        text-align: center;
+    }
+    .borderimgL{
+        border-radius: 50%;
+        display: inline;
+        float: center;
+    }
+    .parrafoInst{
+        font-size: 1.2em !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        
+
+    }
+    .tituloInst2{
+        padding-left: 7%;
+        padding-right: 7%;
+        
+    }
+    .tituloInst{
+        font-size: 2.1em !important;
+    }
+    .TemaLA{
+        text-align: center;
+        font-weight: bold;
+        color:#11101D;
+        font-size: 2.4em;
+    }
+    .LineCapacitaciones{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 11%;
+        margin-right: 11%;
+        opacity: .99;
+    }
+    
+    .LineGE{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 27%;
+        margin-right: 27%;
+        opacity: .99;
+    }
+    
+    .LineAT{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 9%;
+        margin-right: 9%;
+        opacity: .99;
+    }
+    
+    .LinePN{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 13%;
+        margin-right: 13%;
+        opacity: .99;
+    }
+    
+    .LineGA{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 31%;
+        margin-right:31%;
+        opacity: .99;
+    }
+}
+
+/* ---------------------------------------------------
+    Pantallas ≥ 992px Large (lg)
+----------------------------------------------------- */
+@media (min-width: 992px) {
+    .heigthImg{
+        height: 280px !important;
+    }
+    
+    #btnActualizarPrecios{
+        margin-top: 0;
+    }
+
+    .heigthGalery{
+        height: 325px !important;
+    }
+
+    .parrafoPLA{
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        font-size: 1.2em !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .temaPLA{
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        font-size: 2.4em !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .imgPLA{
+        margin-left: 15px !important;
+        height: 100%;
+        width: 100%;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        
+    }
+    .imgPLAR{
+        margin-right: 15px !important;
+        height: 100%;
+        width: 100%;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        
+    }
+    
+    .TemaLA{
+        text-align: center;
+        font-weight: bold;
+        color:#11101D;
+        font-size: 2.6em;
+        
+    }
+    .LineCapacitaciones{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 10%;
+        margin-right: 10%;
+        opacity: .99;
+    }
+    
+    .LineGE{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 32%;
+        margin-right: 32%;
+        opacity: .99;
+    }
+    
+    .LineAT{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 20%;
+        margin-right: 20%;
+        opacity: .99;
+    }
+    
+    .LinePN{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 18%;
+        margin-right: 18%;
+        opacity: .99;
+    }
+    
+    .LineGA{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 33%;
+        margin-right:33%;
+        opacity: .99;
+    }
+
+    #rowHome {
+        margin-left: 6%;
+        margin-right: 6%;
+        text-align: center;
+    }
+    .borderimgL{
+        border-radius: 50%;
+        display: inline;
+        float: center;
+    }
+    .parrafoInst{
+        font-size: 1.3em !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+
+    }
+
+    .tituloInst{
+        font-size: 2.2em !important;
+        margin-left: 28px;
+        margin-left: 28px;
+    }
+}
+
+/* ---------------------------------------------------
+    Pantallas ≥ 1200px Extra large (xl)
+----------------------------------------------------- */
+@media (min-width: 1200px) {
+    .divbtnLeft{
+        margin-left: 0% !important;
+    }
+
+    .heigthImg{
+        height: 315px !important;
+    }
+    
+    #btnActualizarPrecios{
+        margin-top: 0;
+    }
+
+    .heigthGalery{
+        height: 250px !important;
+    }
+    
+    .parrafoPLA{
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        font-size: 1.3em !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .temaPLA{
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        font-size: 2.5em !important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+    .imgPLA{
+        margin-left: 20px !important;
+        height: 100%;
+        width: 100%;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        
+    }
+    .imgPLR{
+        margin-right: 20px !important;
+        height: 100%;
+        width: 100%;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        
+    }
+    #rowHome {
+        margin-left: 7%;
+        margin-right: 7%;
+        text-align: center;
+    }
+    .borderimgL{
+        border-radius: 50%;
+        display: inline;
+        float: center;
+    }
+    .parrafoInst{
+        font-size: 1.3em !important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+
+    }
+    .tituloInst{
+        font-size: 2.2em !important;
+        margin-left: 28px;
+        margin-left: 28px;
+    }
+
+    .tituloInst2{
+        
+        padding-right: 11% !important;
+        padding-left: 11% !important;
+    }
+    .TemaLA{
+        text-align: center;
+        font-weight: bold;
+        color:#11101D;
+        font-size: 2.7em;
+    }
+    .LineCapacitaciones{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 2%;
+        margin-right: 2%;
+        opacity: .99;
+    }
+    
+    .LineGE{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 32%;
+        margin-right: 32%;
+        opacity: .99;
+    }
+    
+    .LineAT{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 20%;
+        margin-right: 20%;
+        opacity: .99;
+    }
+    
+    .LinePN{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 18%;
+        margin-right: 18%;
+        opacity: .99;
+    }
+    
+    .LineGA{
+        height: 2px  !important;
+        background-color: #1c1a31 !important;
+        margin-left: 34%;
+        margin-right:34%;
+        opacity: .99;
+    }
+}
+
+
+
+
+
+
+/* Css Capacitaciones Johana */
+
+.titulos1{
+    padding-top: 7px !important;
+    color:#11101D;   
+    font-weight: bold;
+    font-size: 2.3em;
+    margin: 0 !important;
+    padding-bottom: 0rem!important;
+}
+
+.titulos2{
+    color:#11101D;   
+}
+
+
+
+.parrafo1{
+    padding: 5%;
+}
+
+.fondo{
+    background-color: #E7E7DE !important;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+
+.fondo2{
+    background-color: #E7E7DE !important;
+  
+    
+}
+.cardTotal{
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+.card2{
+    background-color: #E7E7DE !important;
+    
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+.rounded-4 { border-radius: .5rem; }
+.rounded-5 { border-radius: 1rem; }
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: 0px !important;
+}
+
+.containerCards{
+    padding-left: 5%;
+    padding-right: 5% ;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+.imgh{
+    align-items: center;
+     justify-content: center;
+      flex-direction: column;
+}
+
+.card-min-height {
+    min-height: 240px;
+}
+.card-min-height1 {
+    min-height: 290px;
+}
+
+.bg-solicitud{
+    background-color:#11101D !important;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.txtSolicitud{
+    color: white;
+    text-align: center !important;
+}
+
+.rowPrincipal{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+.bg-def{
+    background-color: #E7E7DE  !important;
+    height: 98% ;
+    width: 100%;
+}
+.imgPMR{
+    height: 98%;
+    width: 100%;
+}
+
+.bg-img{
+    
+    background: url(../img/agroMercado1.jpg);
+}
+.bg-precios{
+    background-color: rgb(119, 143, 70);
+    text-align: center;
+    font-weight: bold;
+    color:#11101D;
+    font-size: 2.8em;
+}
+.btnIngresar{
+    color: #fff !important;
+    background-color: #5cb85c !important;
+    border-color: #458a45 !important;
+    min-width: 98% !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+}
+
+.btnIngresar:hover{
+    color: #fff !important;
+    border-color: #5cb85c !important;
+    background-color: #458a45 !important ; 
+}
+
+
+.btnRegistrar{
+    color: #fff !important;
+    background-color: #428bca !important ;
+    border-color: #316592  !important;
+    min-width: 98% !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+}
+
+
+.btnRegistrar:hover{
+    color: #fff !important;
+    border-color: #428bca !important;
+    background-color: #2f5474 !important ;
+}
+.formlogin{
+    color: #11101D !important;
+    background-color: #fff !important;
+}
+
+.imgL{
+    background-image: url(../img/logoAgr.png) !important;
+}
+
+.margenNoticias{
+    margin-right: 7%;
+    margin-left: 7%;
+}
+
+.margenNoticias2{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.imgV{
+    height:83px  !important;
+     width: 145px !important;
+}
+
+.barraNav{
+    background-color: #11101D !important;
+    padding: 0px !important;
+    margin-bottom: 0px!important;
+}
+
+.btnLogin{
+    border-radius: .25rem !important;
+    font-weight: 900 !important;
+    color: #0dcaf0 !important;
+    border-color: #0dcaf0 !important;
+}
+.btnLogin:hover{
+    border-radius: .25rem !important;
+    font-weight: 900 !important;
+    color: #11101D !important;
+    background-color: #0dcaf0 !important;
+    border-color: #11101D!important;
+}
+
+.divLogin{
+    --bs-gutter-x: 1.5rem !important; 
+    padding-right:0% !important; 
+    padding-left:0% !important;
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+}
+
+.divbtnLeft{
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    margin-right: 0% !important;
+}
+
+.inputLogin{
+    width: 98% !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+}
+
+.heigthText{
+    height: 144px !important;
+    overflow: auto;
+}
+
+.btnAGaleria{
+    color: #fff !important;
+    background-color: #5cb85c !important;
+    border-color: #458a45 !important;
+}
+
+.btnAGaleria:hover{
+    color: #fff !important;
+    border-color: #5cb85c !important;
+    background-color: #458a45 !important ; 
+}
+.imgG{
+	max-width: 100%;
+}
+.imgG:hover{
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+        box-shadow: 4px 4px 2px #575656;
+        background-color: rgba(251, 251, 251, 0.2);
+
+        
+}
+.gallery{
+	padding-bottom: 40px;
+    padding-top: 40px;
+}
+.gallery img{
+	width: 100%;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+#gallery-modal-img .modal-img,
+#gallery-modal-video .modal-img{
+	width: 100%;
+}
+#posicionCerrarSesion{
+    padding: .5rem 1rem;
+    position: relative;
+    float: right;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: 0s;
+}
+
+
+
+
+    
+
+/* ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */
